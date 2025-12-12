@@ -1,0 +1,257 @@
+.social-media-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.dark .social-media-page {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+/* Header */
+.sm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sm-title h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #1e293b;
+}
+
+.dark .sm-title h1 {
+    color: #f1f5f9;
+}
+
+.sm-title p {
+    color: #64748b;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.sm-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.sm-search {
+    position: relative;
+}
+
+.sm-search input {
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    font-size: 0.875rem;
+    width: 250px;
+}
+
+.dark .sm-search input {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: white;
+}
+
+.sm-search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.sm-btn-primary {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.sm-btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* Section 1: Metrics Cards */
+.sm-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.sm-metric-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dark .sm-metric-card {
+    background-color: #1e293b;
+    box-shadow: none;
+    border: 1px solid #334155;
+}
+
+.sm-metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.sm-metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.dark .sm-metric-value {
+    color: #f1f5f9;
+}
+
+.sm-metric-trend {
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.sm-trend-up {
+    color: #10b981;
+}
+
+.sm-trend-down {
+    color: #ef4444;
+}
+
+/* Section 2: Planner */
+.sm-section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #334155;
+}
+
+.dark .sm-section-title {
+    color: #cbd5e1;
+}
+
+.sm-planner-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.dark .sm-planner-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    box-shadow: none;
+}
+
+.sm-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.sm-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #e2e8f0;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.dark .sm-calendar-grid {
+    background-color: #334155;
+    border-color: #334155;
+}
+
+.sm-day-cell {
+    background-color: white;
+    min-height: 120px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dark .sm-day-cell {
+    background-color: #1e293b;
+}
+
+.sm-day-number {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.sm-post-item {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #334155;
+}
+
+.dark .sm-post-item {
+    background-color: #334155;
+    color: #e2e8f0;
+}
+
+/* Section 3: Inbox (Reuse styles from previous task but scoped if needed) */
+.sm-inbox-container {
+    display: grid;
+    grid-template-columns: 28% 44% 28%;
+    height: 600px;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.dark .sm-inbox-container {
+    background-color: #1e293b;
+    border-color: #334155;
+    box-shadow: none;
+}
+
+/* Section 4: Performance */
+.sm-performance-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.dark .sm-performance-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    box-shadow: none;
+}

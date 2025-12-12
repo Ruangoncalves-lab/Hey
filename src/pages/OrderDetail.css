@@ -1,0 +1,152 @@
+.order-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.order-title {
+    margin: 0;
+}
+
+.order-date {
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.order-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.order-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.order-main-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.order-timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    bottom: -30px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.timeline-line.active {
+    background-color: var(--accent-color);
+}
+
+.timeline-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.timeline-icon.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-status {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.timeline-status.active {
+    color: var(--text-primary);
+}
+
+.timeline-date {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.order-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.customer-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.customer-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--bg-tertiary);
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-name {
+    margin: 0;
+}
+
+.customer-since {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.customer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-row span:first-child {
+    color: var(--text-secondary);
+}
+
+.shipping-address {
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+}

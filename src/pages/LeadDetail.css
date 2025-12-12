@@ -1,0 +1,117 @@
+.lead-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    height: calc(100vh - 100px);
+}
+
+.lead-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.lead-profile-header {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.lead-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--bg-tertiary);
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lead-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.lead-details {
+    padding: 1.5rem;
+}
+
+.detail-item {
+    margin-bottom: 1rem;
+}
+
+.detail-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.chat-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message-bubble {
+    padding: 0.75rem 1rem;
+    max-width: 70%;
+}
+
+.message-bubble.received {
+    align-self: flex-start;
+    background-color: var(--bg-tertiary);
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.message-bubble.sent {
+    align-self: flex-end;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.message-bubble.received .message-time {
+    color: var(--text-secondary);
+}
+
+.message-bubble.sent .message-time {
+    opacity: 0.8;
+}
+
+.chat-input-area {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 0.75rem;
+}
+
+.chat-input {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .lead-detail-container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "tenants": [
+    {
+      "_id": "tenant_123",
+      "name": "Demo Tenant",
+      "plan": "pro",
+      "settings": {
+        "timezone": "UTC",
+        "currency": "USD"
+      },
+      "created_at": "2025-11-30T18:17:30.251Z",
+      "updated_at": "2025-11-30T18:17:30.251Z"
+    }
+  ],
+  "users": [
+    {
+      "collectionName": "users",
+      "_id": "user_123",
+      "name": "Demo User",
+      "email": "demo@trafficpro.com",
+      "password_hash": "$2a$10$kjAtsaZ.gkFRlgfdcZxV1e8iDpXeNCURUeBJROfku/UK40D1CZKb2",
+      "tenant_id": "tenant_123",
+      "role": "admin",
+      "created_at": "2025-11-30T18:17:30.251Z",
+      "updated_at": "2025-11-30T18:46:08.515Z",
+      "last_login": 1764528368514
+    }
+  ],
+  "connections": []
+}

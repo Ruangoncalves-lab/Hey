@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Quixotic Palette */
+  --color-primary: #059669;
+  /* Deep Emerald */
+  --color-primary-light: #D1FAE5;
+  /* Emerald 100 */
+  --color-primary-dark: #047857;
+  /* Emerald 700 */
+
+  --color-bg-main: #F2F3F5;
+  /* Slightly darker gray for contrast with white cards */
+  --color-bg-card: #FFFFFF;
+
+  --color-text-primary: #1F2937;
+  /* Gray 800 */
+  --color-text-secondary: #6B7280;
+  /* Gray 500 */
+  --color-text-light: #9CA3AF;
+  /* Gray 400 */
+
+  --color-border: #F3F4F6;
+  /* Very light border */
+
+  --font-sans: 'Manrope', 'Inter', sans-serif;
+
+  /* Quixotic Radii - Very Round */
+  --radius-card: 28px;
+  --radius-button: 9999px;
+  /* Pill shape */
+  --radius-input: 20px;
+
+  /* Floating Shadows */
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 50px -12px rgba(0, 0, 0, 0.1);
+  --shadow-floating: 0 20px 60px -15px rgba(0, 0, 0, 0.08);
+}
+
+@layer base {
+  html {
+    font-family: 'Manrope', 'Inter', sans-serif;
+  }
+
+  body {
+    @apply bg-[var(--color-bg-main)] text-[var(--color-text-primary)] antialiased;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+
+  /* Premium Card Styles */
+  .card-premium {
+    @apply bg-[var(--color-bg-card)] rounded-[var(--radius-card)] shadow-[var(--shadow-soft)] border border-white/80 transition-all duration-300 ease-out;
+  }
+
+  .card-premium:hover {
+    @apply shadow-[var(--shadow-hover)] -translate-y-1;
+  }
+
+  /* Pill Buttons */
+  .btn-primary {
+    @apply bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 active:scale-95 flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-[var(--color-text-primary)] border border-gray-100 hover:bg-gray-50 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 shadow-sm active:scale-95 flex items-center justify-center gap-2;
+  }
+
+  .btn-ghost {
+    @apply text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:bg-[var(--color-primary-light)]/50 px-5 py-2.5 rounded-full transition-all duration-200 flex items-center justify-center gap-2 font-medium;
+  }
+
+  /* Inputs */
+  .input-premium {
+    @apply bg-white border-0 ring-1 ring-gray-100 text-[var(--color-text-primary)] rounded-[var(--radius-input)] px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 shadow-sm transition-all duration-200 w-full;
+  }
+
+  /* Navigation Pills */
+  .nav-pill {
+    @apply flex items-center justify-center w-10 h-10 rounded-full text-gray-400 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-200;
+  }
+
+  .nav-pill.active {
+    @apply bg-[var(--color-primary)] text-white shadow-lg shadow-emerald-500/30;
+  }
+
+  /* Clean Tables */
+  .table-clean {
+    @apply w-full text-left border-collapse;
+  }
+
+  .table-clean th {
+    @apply px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider border-b border-gray-100;
+  }
+
+  .table-clean td {
+    @apply px-6 py-4 text-sm text-gray-700 border-b border-gray-50;
+  }
+
+  .table-clean tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .table-clean tr:hover td {
+    @apply bg-gray-50/50 transition-colors;
+  }
+}
+
+/* Custom Scrollbar - Global or Utility */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #D1D5DB;
+  /* gray-300 */
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #9CA3AF;
+  /* gray-400 */
+}
+
+/* Dark mode / Emerald Card Scrollbar */
+.custom-scrollbar-dark::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-thumb {
+  background-color: rgba(4, 120, 87, 0.5);
+  /* emerald-700/50 */
+  border-radius: 9999px;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(5, 150, 105, 0.8);
+  /* emerald-600/80 */
+}

@@ -1,0 +1,86 @@
+.integrations-title {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.integration-card {
+    padding: 0;
+    border: none;
+    transition: transform 0.2s;
+    cursor: default;
+}
+
+.integration-card:hover {
+    transform: translateY(-5px);
+}
+
+.integration-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.integration-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.integration-icon-wrapper {
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.integration-icon-wrapper.connected {
+    background-color: rgba(108, 93, 211, 0.1);
+    color: var(--accent-color);
+}
+
+.integration-icon-wrapper.disconnected {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.integration-badge {
+    border-radius: 0.5rem;
+    padding: 0.35rem 0.75rem;
+}
+
+.integration-info {
+    flex: 1;
+}
+
+.integration-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.integration-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.integration-actions {
+    margin-top: auto;
+}
+
+.integration-btn {
+    width: 100%;
+    border-radius: 0.75rem;
+}

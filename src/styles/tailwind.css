@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+    --color-sidebar-bg: #111216;
+    --color-sidebar-border: #2D2F39;
+    --color-sidebar-hover: #1E2029;
+    --color-accent: #6C5DD3;
+    --color-accent-glow: rgba(108, 93, 211, 0.5);
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #808191;
+}
+
+/* Custom Utilities for the specific look */
+.sidebar-glass {
+    background: linear-gradient(180deg, rgba(23, 25, 35, 0.95) 0%, rgba(17, 18, 22, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-item-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar-item-glow::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-item-glow.active::before {
+    opacity: 1;
+}
+
+.sidebar-item-glow.active {
+    background: linear-gradient(90deg, rgba(108, 93, 211, 0.1) 0%, rgba(108, 93, 211, 0) 100%);
+}
+
+.metallic-bg {
+    background-color: #0D0E12;
+    background-image:
+        radial-gradient(circle at 50% 0%, rgba(108, 93, 211, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 30%);
+}
